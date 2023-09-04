@@ -73,6 +73,7 @@ console.log(del);
 console.log(del.value);
 
 del.addEventListener("click", () => {
+    number_on_screen=screen.innerText
     if(number_on_screen.length==1){
         screen.innerText=0
         number_on_screen=0
@@ -93,6 +94,8 @@ equal.addEventListener("click", () => {
     if(operator_on!=null){
     let result =eval(`${parseFloat(memory)} ${operator_on} ${parseFloat(number_on_screen)}`);
     screen.innerText = result
-    number_on_screen = result}
+    memory=result
+    number_on_screen = result
+operator_on=null}
   });
   
